@@ -1,0 +1,29 @@
+tasks = []
+
+def add_task(task):
+    tasks.append(task)
+    print("Task added!")
+
+def show_tasks():
+    print("\nYour Tasks:")
+
+    for i, task in enumerate(tasks, start=1):
+        print(i, ".", task)
+
+def remove_task(number):
+    if 1 <= number <= len(tasks):
+        removed = tasks.pop(number - 1)
+        print(removed, "removed!")
+    else:
+        print("Invalid task number!")
+
+
+add_task("Study Python")
+add_task("Complete Homework")
+add_task("Practice Coding")
+
+show_tasks()
+
+remove_task(2)
+
+show_tasks()
